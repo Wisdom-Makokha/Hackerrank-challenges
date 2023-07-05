@@ -10,8 +10,6 @@
 #include<stdlib.h>
 
 #define UPPERCONSTRAINT 10000
-float absolutefloat(float nonegative);
-int absoluteint(int nonegative);
 
 int main(void)
 {
@@ -62,6 +60,8 @@ int main(void)
 //1 <= floatvalue <= 10000
 float floatconstraint(float restrain)
 {
+    float absolutefloat(float nonegative);
+
     float temp;
     //wholepart stores the integer value of restrain
     int wholepart = (int) restrain; 
@@ -86,6 +86,8 @@ float floatconstraint(float restrain)
 //1 <= integer <= 10000
 int intconstraint(int restrain)
 {
+    int absoluteint(int nonegative);
+
     restrain = absoluteint(restrain);
 
     //Easier for int values to use modulus operator
