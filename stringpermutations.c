@@ -6,6 +6,9 @@
 
 FILE *output;
 
+//To give the program input type the name of the program plus the strings to permutate
+//a space shows the end of a string
+// eg -> stringpermutations a b c d 
 int main(int size, char *array[])
 { 
     void permutations(char **array, int size, int num);
@@ -26,6 +29,7 @@ int main(int size, char *array[])
     exit(EXIT_SUCCESS);
 }
 
+//swaps the strings in the two given positions in the array
 void swapstrings(char **array, int pos1, int pos2)
 {
     char *temp = array[pos1];
@@ -33,6 +37,7 @@ void swapstrings(char **array, int pos1, int pos2)
     array[pos2] = temp;
 }
 
+//prints output to a file
 void printarray(char **array, int num)
 {
     for(int i = 0; i < num; i++)
@@ -41,6 +46,7 @@ void printarray(char **array, int num)
     fprintf(output, "\n");
 }
 
+//recursive function that carries out the permutations
 void permutations(char **array, int size, int num)
 {
     void swapstrings(char **array, int pos1, int pos2);
